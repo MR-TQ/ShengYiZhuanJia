@@ -25,7 +25,7 @@
             title: '警告',
             template: '用户名或密码错误',
             okText: '确定',
-            okType: ''
+            okType: 'energized-bg'
           });
         }
       };
