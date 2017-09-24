@@ -16,30 +16,51 @@
     <!--<ion-header-bar class="bar-">-->
       <!--<h1 class="title">Left</h1>-->
     <!--</ion-header-bar>-->
-    <ion-content>
-      <div class="row">
-        <div class="col col-66">
-          <h5>QQ</h5>
-          <h6>123456789</h6>
+    <ion-content class="side-background">
+      <div class="row ">
+        <div class="col col-66 ">
+          <h4 class="calm">QQ</h4>
+          <h5 class="calm">123456789</h5>
         </div>
         <div class="col col-33 col-center text-right">
           <span class="energized-bg light">&nbsp;VIP&nbsp;</span>
         </div>
       </div>
-      <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
-        </ion-item>
-      </ion-list>
+      <ul class="list side-menu">
+        <li class="item item-icon-left item-icon-right"menu-close>
+          <i class="ion-briefcase"></i>
+          资金帐户
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right"menu-close>
+          <i class="ion-easel"></i>
+          手机橱窗
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right"menu-close>
+          <i class="ion-share"></i>
+          邀请有礼
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right"menu-close>
+          <i class="ion-chatboxes"></i>
+          开店论坛
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right"menu-close>
+          <i class="ion-email-unread"></i>
+          反馈建议
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right"menu-close>
+          <i class="ion-compose"></i>
+          帮助中心
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </li>
+      </ul>
     </ion-content>
+    <div style="position: fixed; bottom: 10px; left: 10px; z-index: 100;">
+      <a class="button button-dark botton-clear icon-left ion-android-settings " href="">&nbsp;&nbsp;设置</a>
+    </div>
   </ion-side-menu>
 </ion-side-menus>

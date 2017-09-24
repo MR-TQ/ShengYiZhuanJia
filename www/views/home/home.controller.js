@@ -4,8 +4,12 @@
 (function () {
   'use striet';
   angular.module('starter.controllers')
-    .controller('HomeCtrl',['$scope',function($scope) {
-      
+    .controller('HomeCtrl',['$scope','localStorageService', '$state',function($scope,localStorageService,$state) {
+      $scope.$on('$ionieview','beforeEnter',function () {
+        var user = localStorageService.get('user');
+        if (user.isLogin===false)[
+          $state.go('login')
+        ]
+      });
     }])
-
 })();
