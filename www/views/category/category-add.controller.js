@@ -25,10 +25,8 @@
           ID:0,
           Name:''
         });
-
       }
       $scope.add=function () {
-
       }
     }])
 
