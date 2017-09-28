@@ -3,7 +3,7 @@
  */
 (function () {
   'use strict';
-  angular.module('starter.controllers').controller('ShopEditCtrl',['$scope','$stateParams','localStorageService',function ($scope,$stateParams,localStorageService) {
+  angular.module('starter.controllers').controller('ShopEditCtrl',['$scope','$stateParams','localStorageService','$state','$ionicHistory',function ($scope,$stateParams,localStorageService,$state,$ionicHistory) {
     $scope.title=$stateParams.title;
     $scope.property=$stateParams.property;
     $scope.shop=localStorageService.get('Shop',{
@@ -14,9 +14,10 @@
       boss:'',
       email:'',
       shopPhone:''
-    })
+    });
     $scope.save=function () {
-      localStorageService.update('Shop',$scope,shop)
+      localStorageService.update('Shop',$scope.shop);
+      $ionicHistory.goBack();
     }
   }])
-})()
+})();
