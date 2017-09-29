@@ -10,5 +10,14 @@
       });
       $state.go('app.home')
     };
+    $scope.shop={
+      shopPhone:'123456789'
+    };
+    $scope.callPhone=function () {
+      location.href='tel:'+$scope.shop.shopPhone;
+    }
+    $scope.logout=function () {
+      
+    }
   }])
 })();

@@ -59,6 +59,7 @@
 
    ];
     $scope.activeCategory={};
+    $scope.activeSubCategory={};
     if ($scope.categories.length>0){
       $scope.activeCategory=$scope.categories[0];
     }
@@ -66,6 +67,11 @@
       if ($scope.activeCategory.ID != $scope.categories[index].ID) {
         $scope.activeCategory = $scope.categories[index];
       }
+    };
+    $scope.selectSuCategory=function (data) {
+      console.log(data);
+      $scope.activeSubCategory=data;
+      $ionicHistory.goBack();
     };
     $scope.showActiveSheet=function () {
       $ionicActionSheet.show({
@@ -93,5 +99,10 @@
     $scope.gotoCategoryAdd=function () {
       location.href='#/app/category-add/'+$scope.activeCategory.ID+'/'+$scope.activeCategory.Name;
     }
+    $scope.$watch('activesSubCategory',function (newValue,oldValue) {
+      if (newValue.ID){
+        CategoryService.updateCategory($scope.activeSubCategory);
+      }
+    })
   }]);
 })();
