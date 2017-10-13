@@ -3,7 +3,7 @@
  */
 (function () {
   'use strict';
-  angular.module('ayzj.serve')
+  angular.module('starter.controllers')
     .factory('CategoryService',['$rootScope',function ($rootScope) {
       var service={};
       service.activeCategory={

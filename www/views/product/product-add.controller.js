@@ -3,21 +3,24 @@
  */
 (function () {
   'use strict';
-  angular.module('starter.controllers').controller('ProductAddCtrl',['$scope','$CategoryService',function ($scope,$CategoryService) {
+  angular.module('starter.controllers').controller('ProductAddCtrl',['$scope',
+    function ($scope) {
     $scope.product={
-      ID:'',
+      ID:0,
       Name:'',
-      CategoryID:CategoryService.activeCategory.ID,
+      Barcode:'',
+      SupplierID:0,
+      Images:[],
+      CategoryID:5,
       Category:{
-        ID:CategoryService.activeCategory.ID,
-        Name:CategoryService.activeCategory.Name
+        ID:'',
+        Name:''
+      },
+      Supplier:{
+        ID:0,
+        Name:''
       }
     };
-    $scope.$on('CategoryUpdate',function (event,data) {
-      console.log(data);
-      $scope.product.CategoryID=CategoryService.activeCategory.ID;
-      $scope.product.Category.ID=CategoryService.activeCategory.ID;
-      $scope.product.Category.Name=CategoryService.activeCategory.Name;
-    })
+
   }])
 })();

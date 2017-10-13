@@ -1,6 +1,7 @@
 (function () {
   'use striet';
-  angular.module('starter.controllers').controller('CategoryListCtrl',['$scope','$ionicActionSheet',function ($scope,$ionicActionSheet) {
+  angular.module('starter.controllers').controller('CategoryListCtrl',['$scope','$ionicActionSheet','activesSubCategory',
+    function ($scope,$ionicActionSheet,activesSubCategory) {
    $scope.categories=[
      {
        ID:1,
